@@ -1,0 +1,9 @@
+<h2>Book Details</h2>
+
+<div *ngIf="book">
+  <h3>{{ book.name }}</h3>
+  <h4>{{ book.price | currency }}</h4>
+  <p>{{ book.description }}</p>
+
+  <button (click)="addToCart(book)" [routerLink]=>Buy</button>
+</div>

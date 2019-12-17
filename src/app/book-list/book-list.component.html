@@ -1,0 +1,16 @@
+<div>
+    <input [(ngModel)]="searchBook" placeholder="search your whish book here">
+</div>
+<div *ngFor="let book of books| searchText : searchBook">
+
+    <h3>
+        <a [title]="book.name + 'detail'" [routerLink]="['/books',book.id]">
+        {{ book.name }}
+    </a>
+    </h3>
+
+    <p *ngIf="book.description">
+        Description: {{ book.description }}
+      </p>
+  
+  </div>
